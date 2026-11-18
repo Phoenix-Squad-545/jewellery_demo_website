@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@theme {
+  /* Royal Color Palette */
+  --color-maroon-950: #240308;
+  --color-maroon-900: #35040D;
+  --color-maroon-800: #4A0E17;
+  --color-maroon:     #580D1A;
+  --color-maroon-600: #6F1523;
+
+  --color-gold-50:    #FDF9F0;
+  --color-gold-100:   #F8EED9;
+  --color-gold-200:   #EEDDB3;
+  --color-gold-300:   #DFC788;
+  --color-gold-light: #DFB76C;
+  --color-gold:       #C5A059;
+  --color-gold-antique: #A98239;
+  --color-gold-dark:  #7E5C20;
+
+  --color-ivory:      #FFFDF9;
+  --color-cream-50:   #FAF7F2;
+  --color-cream-100:  #F5EFE6;
+  --color-cream-200:  #ECE3D2;
+  --color-cream-300:  #DFD2BC;
+
+  --color-obsidian:   #181412;
+  --color-charcoal:   #251D1B;
+  --color-charcoal-light: #3D3330;
+
+  /* Fonts */
+  --font-cinzel:     "Cinzel", serif;
+  --font-cormorant:  "Cormorant Garamond", serif;
+  --font-sans:       "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* Keyframes */
+  --animate-gradientMove:     gradientMove 12s ease-in-out infinite;
+  --animate-gradientMoveSlow: gradientMoveSlow 18s ease-in-out infinite;
+  --animate-float:            float 6s ease-in-out infinite;
+  --animate-fadeSlideUp:      fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-load:             load 2.5s ease-in-out infinite;
+  --animate-dotPop:           dotPop 1.5s ease-in-out infinite;
+  --animate-zoomInOut:        zoomInOut 10s ease-in-out infinite;
+  --animate-shimmer:          shimmer 3s infinite linear;
+
+  @keyframes gradientMove {
+    0%, 100% { transform: translateX(0); }
+    50%       { transform: translateX(30px); }
+  }
+
+  @keyframes gradientMoveSlow {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-30px); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+
+  @keyframes fadeSlideUp {
+    0%   { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes load {
+    0%   { width: 0%;   opacity: 1; }
+    80%  { width: 100%; opacity: 1; }
+    100% { width: 100%; opacity: 0; }
+  }
+
+  @keyframes dotPop {
+    0%, 100% { opacity: 0.25; transform: scale(1);   }
+    50%       { opacity: 1;    transform: scale(1.5); }
+  }
+
+  @keyframes zoomInOut {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #251D1B;
+}
+
+section {
+  scroll-margin-top: 110px;
+}
+
+/* Luxury gold utility classes */
+.bg-maroon-royal {
+  background-color: #4A0E17;
+}
+
+.bg-maroon-deep {
+  background-color: #35040D;
+}
+
+.text-maroon-royal {
+  color: #4A0E17;
+}
+
+.border-maroon-royal {
+  border-color: #4A0E17;
+}
+
+.bg-gold {
+  background-color: #C5A059;
+}
+
+.bg-gold-light {
+  background-color: #DFB76C;
+}
+
+.text-gold {
+  color: #C5A059;
+}
+
+.text-gold-light {
+  color: #DFB76C;
+}
+
+.border-gold {
+  border-color: #C5A059;
+}
+
+.border-gold-light {
+  border-color: #DFB76C;
+}
+
+.bg-cream {
+  background-color: #F5EFE6;
+}
+
+.bg-ivory {
+  background-color: #FFFDF9;
+}
+
+/* Gold Gradient Shimmer */
+.gold-shimmer-text {
+  background: linear-gradient(135deg, #F3E5C2 0%, #DFB76C 50%, #A98239 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(to right, #DFB76C, #A98239, #DFB76C) 1;
+}
+
+/* Indian ornamental pattern overlays */
+.pattern-jaali {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#C5A059 0.65px, transparent 0.65px), radial-gradient(#C5A059 0.65px, #FAF7F2 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  background-opacity: 0.04;
+}
+
+.pattern-jaali-dark {
+  background-color: #35040D;
+  background-image: radial-gradient(rgba(223, 183, 108, 0.12) 0.8px, transparent 0.8px), radial-gradient(rgba(223, 183, 108, 0.12) 0.8px, #35040D 0.8px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Thin Luxury Royal Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 9999px;
+  border: 1px solid #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A98239;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #C5A059 #F5EFE6;
+}

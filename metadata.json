@@ -1,0 +1,6 @@
+{
+  "name": "Radha Gold Jewellers - Royal Indian Heritage Jewellery",
+  "description": "Premium traditional Indian jewellery boutique featuring royal temple jewellery, bridal sets, jadau kundan, antique gold, and certified craftsmanship.",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
